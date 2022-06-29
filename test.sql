@@ -32,6 +32,14 @@ WHERE id = 1;
 DELETE FROM celebs
 WHERE twitter_handle IS NULL;
 
+--CREATE awads table set constraints
+CREATE TABLE awards (
+   id INTEGER PRIMARY KEY,
+    recipient TEXT NOT NULL,
+    award_name TEXT DEFAULT 'Grammy'
+    
+);
+
 --QUERY of the celebs table
 --FETCHING data from the table
 --SELECT returns the result set
@@ -43,7 +51,12 @@ ORDER BY id;
 --SELECT name
 --FROM celebs;
 
-
+--QUERY of the awards table
+--FETCHING data from the table
+--SELECT returns the result set
+SELECT *
+FROM awards
+ORDER BY id;
 
 
 
