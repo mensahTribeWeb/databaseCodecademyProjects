@@ -24,12 +24,42 @@ VALUES (5, 'Java Mensah', '2020-05-02');
 INSERT INTO friends(id, name, birthday)
 VALUES (6, 'Random Guest', '1996-05-02');
 
---UPDATE friends record
+--UPDATE friends record SET name
 UPDATE friends
 SET name = 'STORM'
+WHERE id = 6;
+
+--ALTER TABLE ADD an additional COLUMN
+ALTER TABLE friends
+ADD COLUMN email TEXT UNIQUE;
+
+--UPDATE email for friends
+UPDATE friends
+SET email = 'strom@randomemail.com'
+WHERE id = 6;
+
+UPDATE friends
+SET email = 'caitlin@randomemail.com'
+WHERE id = 1;
+
+UPDATE friends
+SET email = 'zoe@randomemail.com'
+WHERE id = 2;
+
+UPDATE friends
+SET email = 'alex@randomemail.com'
+WHERE id = 3;
+
+UPDATE friends
+SET email = 'alexander@randomemail.com'
+WHERE id = 4;
+
+--DELETE from TABLE
+DELETE FROM friends
 WHERE id = 6;
 
 --QUERY the RESULT SET for friends TABLE
 --QUERY if  RECORD is establihed
 SELECT *
-FROM friends;
+FROM friends
+ORDER BY  id;
