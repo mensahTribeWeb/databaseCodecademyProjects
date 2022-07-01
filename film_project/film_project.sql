@@ -5,3 +5,8 @@ CREATE TABLE films(
     name TEXT,
     release_year INTEGER
 );
+
+--QUERY film dataBase
+
+SELECT *
+FROM films
